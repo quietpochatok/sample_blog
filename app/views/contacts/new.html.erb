@@ -1,6 +1,15 @@
 <h2>Contact us</h2>
 
 <%= form_for :contact, url: contacts_path do |f| %> <!-- '/contacts' -->
+	
+	<% if @contact %>
+		<p>
+
+			<%= @contact.errors.full_messages %>
+				
+		
+		</p>
+	<% end -%>
 
 	<p>
 		<%= f.label :name %><br>
@@ -21,4 +30,4 @@
 	<p>
 		<%= f.submit 'Send message' %>
 	</p>
-	<% end -%>
+	<% end %>
