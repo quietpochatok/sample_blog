@@ -8,6 +8,9 @@
         @article = Article.new(article_params)
           if @article.valid?
               @article.save
+              #для предотвращения двойного сабмита
+              #дает страницу после отправки,с id(articles/23)articles#show
+              redirect_to @article
             else
               render action: 'new'
           end
