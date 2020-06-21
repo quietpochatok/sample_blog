@@ -1,9 +1,18 @@
-<H2> List of articles </H2>
-<% @articles.each do |article| %>
-	<p>
-		Title of article: <br>
-		<%= article.title %>
-		<br>
-		<%= article.text %>
-	</p> 
+	<H2> List of articles </H2>
+
+	<% @articles.each do |article| %>
+
+		<h2>Title of article: <br>
+			<%= article.title %>	
+		</h2>
+
+		<p>
+			<%= article.text %>
+		</p> 
+
+		<p>
+			<%= link_to 'Show article', article_path(article) %>
+		</p>
+
+		<hr/> 
 	<% end %>
