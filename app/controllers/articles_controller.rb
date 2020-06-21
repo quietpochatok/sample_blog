@@ -13,8 +13,7 @@
        # render plain: params[:article].inspect
          #создание объекта с параметрами из браузера
         @article = Article.new(article_params)
-          if @article.valid?
-              @article.save
+          if  @article.save
               #для предотвращения двойного сабмита
               #дает страницу после отправки,с id(articles/23)articles#show
               redirect_to @article
@@ -40,7 +39,7 @@
               render action: 'edit'
           end
     end
-    
+
       #метод для безопасного передачи введенных данных пользователем
       #нужно для @contact в следствии обновлении разработчиков руби
       private
