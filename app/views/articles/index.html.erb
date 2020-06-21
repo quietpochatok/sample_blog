@@ -1,0 +1,9 @@
+<H2> List of articles </H2>
+<% @articles.each do |article| %>
+	<p>
+		Title of article: <br>
+		<%= article.title %>
+		<br>
+		<%= article.text %>
+	</p> 
+	<% end %>
