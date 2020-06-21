@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resource  :contacts, only: [:new, :create], path_names: {:new => ''}
   resources :articles
   # get 'terms/index' => 'terms#index'
-  resources :terms, only: [:index], path_names: {:index => ''}
-  resources :about, only: [:index], path_names: {:index => ''}
+  resources :terms, only: [:index]
+  resources :about, only: [:index]
   # get '/contacts/index' => 'contacts#index'
   # get '/contacts/' => 'contacts#index'
   # post '/contacts/' => 'contacts#create'
