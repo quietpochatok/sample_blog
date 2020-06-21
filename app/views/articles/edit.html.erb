@@ -1,7 +1,8 @@
 <!-- перенесен из new.erb чтоб редактировать все формы -->
 <h1>Edit article</h1>
-
-<%= form_for :article, url: article_path(@article) do |f| %>
+<!-- 						это хэш						это хэш	
+					 form action="/articles/4"	 change post on put	 -->		
+<%= form_for :article, url: article_path(@article), method: :put do |f| %>
 	<p>
 		<%= f.label :title %><br>
 		<%= f.text_field :title %>
