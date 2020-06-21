@@ -9,7 +9,7 @@
       #вывод введенных данных в хэш
       # render plain: params[:contact].inspect
       #######################################
-      #создание объекта с параметрами из браузера, бех сохранения
+      #создание объекта с параметрами из браузера с сохранением
       @contact = Contact.new(contact_params)
         if @contact.valid?
             @contact.save
