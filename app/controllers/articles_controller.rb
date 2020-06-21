@@ -23,12 +23,26 @@
           end
     end
 
+
     def  edit
       #получение сущности, а также все ее свойства для редактирования
       @article = Article.find(params[:id])
     end
-    #метод для безопасного передачи введенных данных пользователем
-    #нужно для @contact в следствии обновлении разработчиков руби
+
+    def update
+      @article = Article.find(params[:id])
+       if @article.valid?
+              @article.update(article_params) 
+              #для предотвращения двойного сабмита
+              #дает страницу после отправки,с id(articles/23)articles#show
+              redirect_to @article
+            else
+              render action: 'edit'
+          end
+    end
+    
+      #метод для безопасного передачи введенных данных пользователем
+      #нужно для @contact в следствии обновлении разработчиков руби
       private
         def article_params
           params.require(:article).permit(:title, :text)
