@@ -2,6 +2,10 @@
     def new
     end
 
+    def show
+      @article = Article.find(params[:id])
+    end
+
     def create
        # render plain: params[:article].inspect
          #создание объекта с параметрами из браузера
