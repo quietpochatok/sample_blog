@@ -4,15 +4,13 @@
 	
 	<% if @contact && @contact.errors.any? %>
 		<p>
-
 			<% @contact.errors.full_messages.each do |msg| %>
 				<ul>
 					<li>
 						<%= msg %>
 					</li>
 				</ul>
-				<% end -%>
-		
+			<% end -%>
 		</p>
 	<% end -%>
 
