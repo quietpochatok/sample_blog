@@ -40,6 +40,12 @@
           end
     end
 
+    def destroy
+      @article = Article.find(params[:id])
+      @article.delete
+      redirect_to articles_path(@articles)
+    end
+
       #метод для безопасного передачи введенных данных пользователем
       #нужно для @contact в следствии обновлении разработчиков руби
       private
