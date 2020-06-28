@@ -1,6 +1,6 @@
   class ArticlesController < ApplicationController
    
-   before_action :authenticate_user!
+   before_action :authenticate_user!, only: [:new, :create, :edit]
 
     def index
       @articles = Article.all
@@ -27,7 +27,7 @@
     end
 
 
-    def  edit
+    def edit
       #получение сущности, а также все ее свойства для редактирования
       @article = Article.find(params[:id])
     end
