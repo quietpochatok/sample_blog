@@ -1,6 +1,6 @@
   
 # require 'rails_helper'
-
+#загулшка
 # describe "something" do 
 #   it "does something" do
 #     #/////
