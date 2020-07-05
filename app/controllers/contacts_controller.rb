@@ -23,8 +23,8 @@
     private
       def contact_params
       #при командах 14,15 в visitor_create_contact_spec.rb
-      #при ручном заполнении
-      #данные успешно отправляются и сохраняются
+      #при ручном заполнении данные успешно отправляются и сохраняются
+      #возможно проблема в том,что в БД test.sqlite3 в таблице контакт отсутствует колонна email
       #but 'rake spec' выходит следующая ошибка
       # Failure/Error: @contact = Contact.new(contact_params)
       #ActiveModel::UnknownAttributeError:
