@@ -55,6 +55,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem 'database_cleaner'
 end
 group :development, :test do
   gem "factory_bot_rails"
